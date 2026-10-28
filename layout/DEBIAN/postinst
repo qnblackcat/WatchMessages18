@@ -1,0 +1,5 @@
+#!/bin/sh
+# appconduitd survives a respring: restart it so the hook loads (or unloads). launchd relaunches it. Plain SIGTERM,
+# not -9, so it saves its watch app state before exiting.
+killall appconduitd 2>/dev/null
+exit 0

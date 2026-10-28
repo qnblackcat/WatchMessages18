@@ -1,0 +1,9 @@
+Package: com.qn.watchmessages18
+Name: WatchMessages18
+Depends: mobilesubstrate, firmware (>= 15.0), firmware (<< 18.4)
+Version: 1.0.0
+Architecture: iphoneos-arm
+Description: Keeps the Messages app on watchOS 11.4+ Apple Watches when paired with iPhones running iOS 18.3 or older
+Maintainer: Qn
+Author: Qn
+Section: Tweaks
