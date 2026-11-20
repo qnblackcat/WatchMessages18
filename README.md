@@ -6,12 +6,6 @@ watchOS 11.4 treats Messages as a removable system app that the watch keeps only
 app as available. iOS 18.4+ does that; older iOS does not, so the watch loses Messages (or it disappears again after you
 reinstall it from the App Store on the watch).
 
-## Status
-| | Result |
-|---|---|
-| iOS 17.1.1 (roothide) + watchOS 11.4 | verified: Messages stays, opens and sends after reconnects and watch restarts |
-| iOS 15.0, 15.6.1, 16.3.1 | same code in `appconduitd`, **not tested on a device** |
-
 ## How it works
 One hook in `appconduitd`: `-[ACXAvailableApplicationManager possibleCompanionDeletableSystemAppToWatchCounterpartsMap]`
 gets `com.apple.MobileSMS → {com.apple.MobileSMS}`, the entry iOS 18.4 has natively. The watch picks it up on the next
